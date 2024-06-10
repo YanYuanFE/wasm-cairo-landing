@@ -1,4 +1,5 @@
 import { Github, Twitter } from 'lucide-react';
+import { globalConfig } from '@/constants';
 
 export const Footer = () => {
   return (
@@ -99,7 +100,7 @@ export const Footer = () => {
       <div className="flex flex-col gap-2 border-t py-4 sm:flex sm:flex-row sm:items-center sm:justify-between">
         <div className="flex space-x-5 sm:mt-0 sm:justify-center">
           <a
-            href="https://github.com/cryptonerdcn/wasm-cairo"
+            href={globalConfig.githubUrl}
             className="fill-neutral-500 text-neutral-500 hover:fill-neutral-900 hover:text-neutral-900 dark:hover:fill-neutral-600 dark:hover:text-neutral-600"
           >
             <Github size={16} />

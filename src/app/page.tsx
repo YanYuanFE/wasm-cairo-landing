@@ -5,6 +5,8 @@ import { Footer } from '@/components/Footer';
 import { Meteors } from '@/components/meteors';
 import { ArrowRight } from '@/components/Icons';
 import { useRouter } from 'next/navigation';
+import { globalConfig } from '@/constants';
+import { Button } from '@/components/ui/button';
 
 const ProductCardItem = ({
   title,
@@ -86,13 +88,27 @@ export default function Home() {
             The WASM-Cairo Project is a sophisticated ensemble of development tools designed to offer developers a
             simplified and streamlined experience when working with the Cairo programming language.
           </p>
-          <button
-            onClick={handleClick}
-            className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary shadow hover:bg-primary/90 h-9 px-4 py-2 translate-y-[-1rem] animate-fade-in gap-1 rounded-lg text-white dark:text-black opacity-0 ease-in-out [--animation-delay:600ms]"
-          >
-            <span>Get Started</span>
-            <ArrowRight />
-          </button>
+          <div className="flex gap-4 justify-center">
+            <Button
+              onClick={handleClick}
+              className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring translate-y-[-1rem] animate-fade-in gap-1 rounded-lg opacity-0 ease-in-out [--animation-delay:600ms] h-10 px-4 py-2"
+            >
+              <span>Playground</span>
+            </Button>
+            <a
+              href={globalConfig.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center translate-y-[-1rem] animate-fade-in gap-1 rounded-lg opacity-0 ease-in-out [--animation-delay:600ms] "
+            >
+              <Button
+                variant={'outline'}
+                className="rounded-md text-sm font-medium ring-offset-background transition-colors h-10 px-4 py-2"
+              >
+                Go to GitHub <ArrowRight />
+              </Button>
+            </a>
+          </div>
         </div>
       </section>
 
