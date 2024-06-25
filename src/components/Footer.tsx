@@ -1,6 +1,26 @@
 import { Github, Twitter } from 'lucide-react';
 import { globalConfig } from '@/constants';
 
+const ArrowRightIcon = () => {
+  return (
+    <svg
+      width="15"
+      height="15"
+      viewBox="0 0 15 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-4 w-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100"
+    >
+      <path
+        d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
+        fill="currentColor"
+        fillRule="evenodd"
+        clipRule="evenodd"
+      ></path>
+    </svg>
+  );
+};
+
 export const Footer = () => {
   return (
     <footer className={'max-w-7xl mx-auto w-full'}>
@@ -29,6 +49,7 @@ export const Footer = () => {
                   }
                 >
                   astro editor
+                  <ArrowRightIcon />
                 </a>
               </li>
               <li>
@@ -40,57 +61,30 @@ export const Footer = () => {
                   }
                 >
                   starklings app
+                  <ArrowRightIcon />
                 </a>
               </li>
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold uppercase text-neutral-900 dark:text-white">Legal</h2>
+            <h2 className="mb-6 text-sm font-semibold uppercase text-neutral-900 dark:text-white">About</h2>
             <ul className="grid gap-2">
               <li>
                 <a
-                  href="#"
+                  href="https://www.cairo-lang.org/"
                   className="group inline-flex cursor-pointer items-center justify-start gap-1 text-[15px]/snug font-medium text-neutral-400 duration-200 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200"
                 >
-                  Privacy Policy
-                  <svg
-                    width="15"
-                    height="15"
-                    viewBox="0 0 15 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100"
-                  >
-                    <path
-                      d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
+                  Cairo Lang
+                  <ArrowRightIcon />
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://www.starknet.io/"
                   className="group inline-flex cursor-pointer items-center justify-start gap-1 text-[15px]/snug font-medium text-neutral-400 duration-200 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200"
                 >
-                  Terms of Service
-                  <svg
-                    width="15"
-                    height="15"
-                    viewBox="0 0 15 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100"
-                  >
-                    <path
-                      d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
+                  Starknet
+                  <ArrowRightIcon />
                 </a>
               </li>
             </ul>
@@ -104,7 +98,7 @@ export const Footer = () => {
             className="fill-neutral-500 text-neutral-500 hover:fill-neutral-900 hover:text-neutral-900 dark:hover:fill-neutral-600 dark:hover:text-neutral-600"
           >
             <Github size={16} />
-            <span className="sr-only">Linkedin</span>
+            <span className="sr-only">Github</span>
           </a>
           <a
             target={'_blank'}

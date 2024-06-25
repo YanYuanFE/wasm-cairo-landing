@@ -97,18 +97,21 @@ export default function PlayGround() {
   return (
     <main className="min-h-screen">
       <Header />
-      <div className={'pt-24 px-6 flex gap-4'}>
+      <div className={'py-6 px-6 flex gap-4 h-[calc(100vh - 80px)] top-[80px] left-0 w-full fixed'}>
         <div className="overlay rounded-md overflow-hidden w-full h-full shadow-4xl flex-1">
           <Editor
-            height="86vh"
+            height="calc(100vh - 128px)"
             width={`100%`}
             language={'rust'}
             value={value}
             theme={'oceanic-next'}
             onChange={handleEditorChange}
+            options={{
+              fontSize: 14
+            }}
           />
         </div>
-        <div className={'flex-[0_0_500px]'}>
+        <div className={'flex-[0_0_500px] h-full'}>
           <div className="flex gap-4 mb-4">
             <Button onClick={handleCompile} loading={compileLoading} className={'gap-1'}>
               <Hammer size={16} />
@@ -124,14 +127,16 @@ export default function PlayGround() {
             </Button>
           </div>
           <h1 className="font-bold text-xl text-white my-2">Output</h1>
-          <Textarea
-            className={cn(
-              'w-full h-[73.5vh] bg-[#1e293b] rounded-md text-white font-normal text-sm overflow-y-auto py-1 px-2',
-              hasError ? 'text-red-500' : 'text-green-500'
-            )}
-            value={output}
-            readOnly
-          ></Textarea>
+          <div className="h-[calc(100vh-220px)]">
+            <Textarea
+              className={cn(
+                'w-full h-full  bg-[#1e293b] rounded-md text-white font-normal text-sm overflow-y-auto py-1 px-2',
+                hasError ? 'text-red-500' : 'text-green-500'
+              )}
+              value={output}
+              readOnly
+            ></Textarea>
+          </div>
         </div>
       </div>
     </main>
